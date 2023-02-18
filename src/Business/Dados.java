@@ -8,12 +8,12 @@ import java.util.Random;
 
 /**
  *
- * @author red-iso
+ * @author CamiloN
  */
 public class Dados {
 int myDado [];
     
-    
+    //crea un arreglo de enteros(int) del tamano al valor indicado (c)
     public String generarDados(int c) {
 
        this.myDado=new int [c];
@@ -23,7 +23,7 @@ int myDado [];
        }
         return this.arrayDados();
     }
-    
+    //modifica el arreglo de dados (myDado) con valores nuevos
     public String generarDados() {
 
        for(int i=0;i<this.myDado.length;i++){
@@ -31,7 +31,7 @@ int myDado [];
        }
         return this.arrayDados();
     }
-    
+    //crea una lista de los dados actuales
     public String arrayDados(){
        String c="";
        for(int i=0;i<this.myDado.length;i++){
@@ -39,7 +39,7 @@ int myDado [];
        }
         return c;
     }
-    
+    //genera un numero entre 1 y 6
     private int dropDado(){
         int c;
         Random r=new Random();

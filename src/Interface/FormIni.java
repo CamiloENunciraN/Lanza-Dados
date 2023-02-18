@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author red-iso
+ * @author CamiloN
  */
 public class FormIni extends javax.swing.JFrame {
 Dados d;

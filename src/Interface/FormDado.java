@@ -142,11 +142,12 @@ Dados d;
     for(int i=0;i<dados.length;i++){
 
 //        System.out.print(dados[i]);
-
+            //crea una etiqueta (JLabel) para introducir el icono
             JLabel l=new JLabel("dado");
+            //crea un icono nulo
             ImageIcon icono=null;
 
-            
+            //selecciona el icono a mostrar de acuerdo al valor
             if("1".equals(dados[i])){         
                 icono = new ImageIcon("src/img/one.png");
             }else if("2".equals(dados[i])){
@@ -161,13 +162,19 @@ Dados d;
                 icono = new ImageIcon("src/img/six.png");  
             }
         
-           
+           //carga el icono a la etiqueta(l)
             l.setIcon(icono);
+            //agrega la etiqueta al panel(jpDado)
             this.jpDado.add(l);
+            //modifica el tamano de la etiqueta para que se vea el icono
             l.setSize(32,32);
+            //ubica la etiqueta en una posicion determinada (x,y)
             l.setLocation(contx, conty);
 
-            //if para validar que espacio en patalla
+            //if para validar que espacio del panel hay en patalla
+            //o si debe pasar a la siguiente linea
+            //el icono es de 32x32 pixeles y 2 pixeles de separacion
+            //entre elementos
             if((contx+34)<this.jpDado.getSize().getWidth()){
                 contx=contx+34;               
             }else{
